@@ -14,20 +14,21 @@ const About = () => {
 					/>
 					<div className="flex-1">
 						<p className="text-lg mb-8">
-							I am a passionate and detail-oriented Data Scientist and Machine
-							Learning Engineer. My work focuses on developing innovative,
-							data-driven solutions to solve real-world challenges in
-							healthcare, education, and renewable energy. With a strong
-							foundation in software engineering, I thrive on building impactful
-							technologies for a better future.
+							I am a passionate and detail-oriented Data Scientist, Machine
+							Learning Engineer, and dedicated researcher. My work centers on
+							developing innovative, data-driven solutions to address real-world
+							challenges in healthcare, education, and renewable energy. With a
+							strong foundation in software engineering, I am deeply committed
+							to advancing research that fuels impactful technologies for a
+							better, more sustainable future.
 						</p>
-	
+
 						<div className="mt-12 flex justify-between text-center">
 							<div>
 								<h3
 									className="text-2xl font-bold text-transparent bg-clip-text 
                 bg-gradient-to-r from-green-400 to-blue-500">
-									3+
+									2+
 								</h3>
 								<p>Years Experience</p>
 							</div>
@@ -35,7 +36,7 @@ const About = () => {
 								<h3
 									className="text-2xl font-bold text-transparent bg-clip-text 
                 bg-gradient-to-r from-green-400 to-blue-500">
-									50+
+									5+
 								</h3>
 								<p>Projects Completed</p>
 							</div>
@@ -43,9 +44,9 @@ const About = () => {
 								<h3
 									className="text-2xl font-bold text-transparent bg-clip-text 
                 bg-gradient-to-r from-green-400 to-blue-500">
-									10+
+									5+
 								</h3>
-								<p>Happy Clients</p>
+								<p>Certifications</p>
 							</div>
 						</div>
 					</div>
