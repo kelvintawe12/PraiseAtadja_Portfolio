@@ -1,77 +1,47 @@
-import React from "react";
-import {
-	FaFacebook,
-	FaGithub,
-	FaLinkedin,
-	FaTwitter,
-	FaInstagram,
-} from "react-icons/fa";
+// components/Footer.jsx
+import React from 'react';
+// components/Footer.jsx
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
-	return (
-		<footer className="bg-black text-white py-8">
-			<div className="container mx-auto px-8 md:px-16 lg:px-24">
-				<div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
-					<div className="flex-1 mb-4 md:mb-0">
-						<h3 className="text-2xl font-bold mb-2">Orlyaseye</h3>
-						<p className="text-gray-400">
-							Software Engineer, specializing in data science and machine
-							learning.
-						</p>
-					</div>
-					<div className="flex-1 w-full">
-						<form className="flex items-center justify-center">
-							<input
-								type="email"
-								placeholder="Your email"
-								className="w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600 
-                focus:outline-none focus:border-green-400"
-							/>
-							<button
-								type="submit"
-								className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 
-                py-2 rounded-r-lg">
-								Subscribe
-							</button>
-						</form>
-					</div>
-				</div>
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        {/* Mission Statement */}
+        <div className="footer-section">
+          <h4>My Mission</h4>
+          <p>Democratizing healthcare access in Africa through AI innovation</p>
+        </div>
 
-				<div
-					className="border-t border-gray-600 pt-4 flex flex-col md:flex-row 
-          justify-between items-center">
-					<p className="text-gray-400">
-						&copy; {new Date().getFullYear()} Orlyaseye. All rights reserved.
-					</p>
-					<div className="flex space-x-4 my-4 md:my-0">
-						<a
-							href="https://www.linkedin.com/in/praise-orly-atadja"
-							className="text-gray-400 hover:text-white">
-							<FaLinkedin />
-						</a>
-						<a
-							href="https://github.com/Praise-Atadja"
-							className="text-gray-400 hover:text-white">
-							<FaGithub />
-						</a>
-						<a
-							href="https://www.instagram.com/_orlyaseye/"
-							className="text-gray-400 hover:text-white">
-							<FaInstagram />
-						</a>
-					</div>
-					<div className="flex space-x-4">
-						<a href="#" className="text-gray-400 hover:text-white">
-							Privacy
-						</a>
-						<a href="#" className="text-gray-400 hover:text-white">
-							Terms of Service
-						</a>
-					</div>
-				</div>
-			</div>
-		</footer>
-	);
+        {/* Quick Links */}
+        <div className="footer-section">
+          <h4>Quick Links</h4>
+          <a href="/about">About</a>
+          <a href="/projects">Projects</a>
+          <a href="/contact">Contact</a>
+        </div>
+
+        {/* Social Links */}
+        <div className="footer-section">
+          <h4>Connect</h4>
+          <div className="social-links">
+            <a href="https://linkedin.com">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a href="https://github.com">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="footer-bottom">
+        <p>© 2024 Praise Atadja. All rights reserved.</p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
