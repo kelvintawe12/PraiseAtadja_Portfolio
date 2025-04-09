@@ -1,38 +1,33 @@
-import React from 'react';
 import './About.css';
 
 const About = () => {
   return (
-    <section id="about" className="about-section">
-      <div className="about-container">
-        <div className="about-content">
-          <h2 className="section-title">About Me</h2>
-          <div className="about-grid">
-            <div className="about-card">
-              <h3>Background</h3>
-              <p>
-                AI and healthcare innovator with a passion for developing 
-                accessible solutions for African healthcare challenges.
-              </p>
-            </div>
-            <div className="about-card">
-              <h3>Education</h3>
-              <p>
-                BSc in Computer Science with specialization in 
-                Artificial Intelligence and Machine Learning.
-              </p>
-            </div>
-            <div className="about-card">
-              <h3>Mission</h3>
-              <p>
-                To bridge the gap between cutting-edge AI technology 
-                and healthcare accessibility in Africa.
-              </p>
-            </div>
-          </div>
+    <div className="about">
+      <section className="contact-info">
+        <h1>PRAISE ORLY AKU ATADJA</h1>
+        <p>Sekimondo | Kigali, Rwanda | +250 790004033</p>
+        <p>praiseorly.a@gmail.com | LinkedIn Profile | Github | Portfolio</p>
+      </section>
+
+      <section className="summary">
+        <h2>SUMMARY</h2>
+        <p>
+          Driven by a deep commitment to improving healthcare in Africa, I aim to leverage AI and Machine Learning to address critical gaps in medical access and diagnostics in Africa. With practical experience in developing AI-driven solutions for healthcare challenges, I focus on creating accessible tools that enhance early detection, treatment, and patient outcomes, especially in underserved communities. I am dedicated to using technology to bridge the healthcare divide and improve lives, ensuring that innovation reaches those who need it most.
+        </p>
+      </section>
+
+      <section className="education">
+        <h2>EDUCATION</h2>
+        <div className="education-item">
+          <h3>African Leadership University(ALU) – Kigali, Rwanda</h3>
+          <p className="date">Jan. 2022 – June.2025</p>
+          <p>Mastercard Foundation Scholar</p>
+          <p>BSc (Hons) Software Engineering(First Class) - Specialization: Machine Learning, AI for Healthcare</p>
+          <p>Cumulative GPA 4.56/5.0</p>
+          <p>Relevant Coursework: Mathematics for Machine, Machine Learning Techniques, Ethics in Software Engineering Frontend & Backend Development and Entrepreneurial Leadership.</p>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

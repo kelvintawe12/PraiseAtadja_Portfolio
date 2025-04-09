@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Navbar.module.css';
+import styles from './Navbar_new.module.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,29 +71,3 @@ const Navbar = () => {
                 >
                   {item.label}
                 </button>
-                {openSubmenu === item.label && (
-                  <div className={styles.submenu}>
-                    {item.children.map((child) => (
-                      <NavLink
-                        key={child.path}
-                        to={child.path}
-                        className={({isActive}) => 
-                          isActive ? `${styles.submenuLink} ${styles.active}` : styles.submenuLink
-                        }
-                        onClick={handleLinkClick}
-                      >
-                        {child.label}
-                      </NavLink>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )
-          ))}
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
