@@ -71,3 +71,27 @@ const Navbar = () => {
                 >
                   {item.label}
                 </button>
+                <div className={`${styles.submenu} ${openSubmenu === item.label ? styles.open : ''}`}>
+                  {item.children.map((child) => (
+                    <NavLink
+                      key={child.path}
+                      to={child.path}
+                      className={({isActive}) => 
+                        isActive ? `${styles.submenuLink} ${styles.active}` : styles.submenuLink
+                      }
+                      onClick={handleLinkClick}
+                    >
+                      {child.label}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            )
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
