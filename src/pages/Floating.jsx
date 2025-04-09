@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, MessageCircle, Share2, Github, Linkedin } from 'lucide-react';
-import './FloatingButtons.css';
+import '../components/FloatingButtons.css';
 
 const FloatingButtons = () => {
   // Define button data with icons, labels, colors, and actions

@@ -1,0 +1,66 @@
+/* Navbar.css */
+nav {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 0.5rem 2rem; /* Padding for spacing */
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+nav .container .text-transparent {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav .container .space-x-6 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .container .space-x-6 a:hover {
+    color: #a0aec0; /* Gray color on hover */
+}
+
+nav .container button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav .container button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+@media (min-width: 768px) {
+    nav .container {
+        justify-content: space-between;
+    }
+
+    nav .container .text-transparent {
+        display: inline-block;
+    }
+
+    nav .container button {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 767px) {
+    nav .container .text-transparent,
+    nav .container button {
+        display: none; /* Hide on smaller screens */
+    }
+}

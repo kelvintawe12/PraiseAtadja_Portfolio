@@ -1,26 +1,24 @@
-
-import './App.css'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import Navbar from './components/Navbar'
-import Project from './components/Data_Science'
-import Service from './components/Data_Analytics'
+import { Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './components/Projects';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
+import './App.css';
 
 function App() {
-
   return (
-    <div>
-        <Navbar />
-        <Home />
-        <About />
-        <Service />
-        <Project />
-        <Contact />
-        <Footer />
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,103 @@
+/* App.css */
+:root {
+    --primary-color: #2a4365;
+    --secondary-color: #c53030;
+    --accent-color: #2b6cb0;
+    --text-color: #2d3748;
+    --light-bg: #f7fafc;
+    --transition-speed: 0.3s;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+  }
+  
+  .main-content {
+    flex: 1;
+    margin-top: 80px; /* Adjust based on navbar height */
+  }
+  
+  .fullscreen-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .section-wrapper {
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  .section-wrapper.alt-bg {
+    background-color: var(--light-bg);
+  }
+  
+  .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* Popup Styles */
+  .popup-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .popup-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .fullscreen-section {
+      padding: 1rem;
+    }
+    
+    .section-wrapper {
+      padding: 4rem 0;
+    }
+  
+    .content-container {
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-content {
+      margin-top: 60px;
+    }
+  }
+  
+  /* Animations */
+  .fade-in {
+    animation: fadeIn var(--transition-speed) ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

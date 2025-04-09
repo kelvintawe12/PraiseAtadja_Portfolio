@@ -1,25 +1,19 @@
-// components/Layout.jsx
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Sidebar from './Sidebar';
-import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Floating from '../components/Floating';
+import styles from './Layout.module.css';
 
-const Layout = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+const Layout = () => {
   return (
-    <div className="layout">
-      <Header onMenuToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
-      <Sidebar 
-        isOpen={isSidebarOpen} 
-        onClose={() => setIsSidebarOpen(false)}
-      />
-      <main className="main-content">
-        {children}
+    <>
+      <Navbar />
+      <main className={styles.layout}>
+        <div className={styles.content}>
+          <Outlet />
+        </div>
       </main>
-      <Footer />
-    </div>
+      <Floating />
+    </>
   );
 };
 

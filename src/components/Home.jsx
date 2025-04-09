@@ -1,9 +1,12 @@
 import React from 'react'
 import HomeImage from '../assets/aseye.jpg'
+import Header from './Header'
+import Footer from './Footer'
 
 const Home = () => {
   return (
 		<div className="bg-black text-white text-center py-16">
+			<Header />
 			<img
 				src={HomeImage}
 				alt=""
@@ -46,6 +49,7 @@ const Home = () => {
 					</button>
 				</a>
 			</div>
+			<Footer/>
 		</div>
 	);
 }
